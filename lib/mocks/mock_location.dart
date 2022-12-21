@@ -8,7 +8,8 @@ class MockLocation extends Location {
     return Location(
         name: 'New York City',
         url:
-            'https://www.dogtime.com/assets/uploads/2011/03/puppy-development-1280x720.jpg',
+            'https://media.4-paws.org/1/e/d/6/1ed6da75afe37d82757142dc7c6633a532f53a7d/VIER%20PFOTEN_2019-03-15_001-2886x1999-1920x1330.jpg',
+        // 'https://www.dogtime.com/assets/uploads/2011/03/puppy-development-1280x720.jpg',
         facts: <LocationFact>[
           LocationFact(
             title: 'Summary',

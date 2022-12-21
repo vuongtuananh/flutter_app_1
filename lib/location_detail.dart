@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './models/location.dart';
+import 'styles.dart';
 
 class LocationDetail extends StatelessWidget {
   // const LocationDetail({super.key});
@@ -11,7 +12,10 @@ class LocationDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(location.name),
+          title: Text(
+            location.name,
+            style: Styles.navBarTitle,
+          ),
           backgroundColor: Colors.lightGreen[300],
           centerTitle: true,
           foregroundColor: Colors.amber[900],
@@ -35,7 +39,7 @@ class LocationDetail extends StatelessWidget {
 
   List<Widget> _renderBody(BuildContext context, Location location) {
     var result = <Widget>[];
-    result.add(_bannerImage(location.url, 170.0));
+    result.add(_bannerImage(location.url, 370.0));
     result.addAll(_renderFacts(context, location));
     return result;
   }
@@ -55,19 +59,19 @@ class LocationDetail extends StatelessWidget {
       child: Text(
         title,
         textAlign: TextAlign.left,
-        style: const TextStyle(
-          fontSize: 25.0,
-          color: Colors.black,
-        ),
+        style: Styles.headerLarge,
       ),
     );
   }
 
   Widget _sectionText(String text) {
     return Container(
-      padding: EdgeInsets.fromLTRB(25.0, 15.0, 25.0, 15.0),
-      child: Text(text),
-    );
+        padding: EdgeInsets.fromLTRB(25.0, 15.0, 25.0, 15.0),
+        child: Text(
+          text,
+          textAlign: TextAlign.left,
+          style: Styles.textDefault,
+        ));
   }
 
   Widget _bannerImage(String url, double height) {
